@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryo Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+      backdrop-filter: blur(10px);
+      background: rgba(10, 10, 20, 0.85);
+      color: #fff;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    .light-theme {
+      background: rgba(255, 255, 255, 0.8);
+      color: #111;
+    }
+
+    header, section {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 0;
+    }
+
+    .logo {
+      width: 120px;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #444;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    .light-theme .theme-toggle {
+      background: #ddd;
+      color: #111;
+    }
+
+    h1, h2 {
+      margin-bottom: 0.5rem;
+      font-weight: 800;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+    }
+
+    p, ul {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .cta {
+      margin-top: 3rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .cta a {
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      margin-right: 1rem;
+      background: #007bff;
+      color: white;
+      /* border-radius: 6px; */
+      border-color: rgb(255, 255, 255);
+      border-style: double;
+      border-width: 1px;
+      transition: background 0.2s ease;
+    }
+
+    .cta a:hover {
+      background: #0056b3;
+    }
+
+    .quick-stats {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 10px;
+      min-width: 200px;
+    }
+
+    .process-flow-list{
+        margin-left: 5rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <header>
+    <img src="logo.jpeg" alt="Cryo Project Logo" class="logo" />
+    <h1>Reclaiming Value. Rebuilding Tomorrow.</h1>
+    <p><strong>Cryogenic Pulverization of E-Waste for High-Purity Material Recovery</strong></p>
+    <div class="cta">
+      <a href="#solution">Explore Our Process</a>
+      <a href="#contact">Get in Touch</a>
+    </div>
+
+    <div class="quick-stats">
+      <div class="stat"><strong>95%+</strong><br />Recovery efficiency (DDR3 RAM benchmark)</div>
+      <div class="stat"><strong>0 toxic emissions</strong><br />Zero-heat, zero-acid process</div>
+      <div class="stat"><strong>India-first</strong><br />Cryo-milling solution for PCB waste</div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p><strong>Vision:</strong> A cleaner planet powered by smarter recovery.</p>
+    <p><strong>Mission:</strong> To industrialize a scalable, clean, and cost-effective cryogenic pulverization system.</p>
+    <p><strong>Who We Are:</strong> Engineers, researchers, and operators driven by science and purpose.</p>
+  </section>
+
+  <section id="problem">
+    <h2>The Problem</h2>
+    <p><strong>E-waste is a gold mine we keep burning.</strong></p>
+    <p>Every tonne of electronics contains valuable materials, yet most end up in landfills or incinerated.</p>
+    <ul>
+      <li>Toxic emissions</li>
+      <li>Low recovery rates</li>
+      <li>Energy-intensive & hazardous</li>
+      <li>Unviable at scale in India</li>
+    </ul>
+  </section>
+
+  <section id="solution">
+    <h2>Our Solution</h2>
+    <p><strong>Cryogenic Pulverization:</strong> A dry, scalable process that cleanly separates materials from PCBs.</p>
+    <p><strong>Process Flow:</strong></p>
+    <ol class="process-flow-list">
+      <li>Manual Dismantling</li>
+      <li>Shredding</li>
+      <li>Cryogenic Treatment</li>
+      <li>Pulverization</li>
+      <li>Mechanical Sieving</li>
+      <li>Shaking Table Separation</li>
+      <li>Electrostatic Refinement</li>
+    </ol>
+    <br>
+    <p><strong>Output Streams:</strong> Copper, base metals, gold-enriched fractions, and resin dust.</p>
+    <p><strong>Why It’s Better:</strong> No acid, no heat, no emissions. Better purity. More scalable.</p>
+  </section>
+
+  <section id="why-now">
+    <h2>Why Now</h2>
+    <ul>
+      <li>India generates over <strong>1 million tonnes</strong> of e-waste annually</li>
+      <li>Rising EPR and carbon regulations</li>
+      <li>Global scarcity of critical materials</li>
+    </ul>
+  </section>
+
+  <section id="technology">
+    <h2>Technology</h2>
+    <p><strong>Built from First Principles:</strong> Our IP-pending cryo-mill is designed specifically for PCB waste.</p>
+    <ul>
+      <li>DDR3 RAM recovery benchmark: 95%</li>
+      <li>Lab & commercial validation complete</li>
+      <li>Patent in progress</li>
+      <li>Manufacturing partner: Under discussion</li>
+    </ul>
+  </section>
+
+  <section id="impact">
+    <h2>Impact</h2>
+    <p><strong>Environmental:</strong> Reduces landfill and acid-based recycling.</p>
+    <p><strong>Economic:</strong> Unlocks high-margin metal recovery and enables rural micro-recovery units.</p>
+    <p><strong>Strategic:</strong> Supports India’s self-reliance in critical materials.</p>
+  </section>
+
+  <section id="team">
+    <h2>Team</h2>
+    <ul>
+      <li><strong>Shri Srinivasa Ragavan:</strong> Computer engineer blending robotics and AI with waste recovery.</li>
+      <br>
+      <li><strong>Dr Shri ChandraSekhar Tiwary:</strong> Metallurgy and nanoparticle researcher. Academic backbone.</li>
+      <br>
+      <li><strong>Shri Jayakumar Jayaraman:</strong> Mechanical engineer & financial strategist. Builds precision startups.</li>
+    </ul>
+  </section>
+
+  <section id="investors">
+    <h2>Investors</h2>
+    <p><strong>We’re raising smart capital.</strong></p>
+    <p>Looking for partners who understand deep-tech, materials, and sustainability.</p>
+    <div class="cta">
+      <a href="#">Request Pitch Deck</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Let’s talk recovery, not recycling.</strong></p>
+    <p>Email: contact@sahriti.com</p>
+    <p>Phone: +91-XXXXXXXXXX</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Cryo Project. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+    }
+  </script>
+</body>
+
+</html>
